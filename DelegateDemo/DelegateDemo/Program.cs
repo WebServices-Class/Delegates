@@ -30,8 +30,10 @@ namespace DelegateDemo
             int shapename = 0;
             string dataname;
             r = new Random();
-            List<object> things = new List<object>();
+            List<Shape> things = new List<Shape>();
             int length = r.Next(4);
+
+            //creating a list of shapes using the polimorphism property of inherited classes
             for (int i = 0; i < length+3; i++)
             {
                 if(r.Next(2)==0)
@@ -43,31 +45,26 @@ namespace DelegateDemo
                     things.Add(new Pyramid("blue", r.Next(20), r.Next(20)));
                 }
             }
+
+            //selecting a shape in the list
             Console.WriteLine(string.Format("what shape number to investigate? (1-{0})",things.Count));
             shapename = int.Parse(Console.ReadLine())-1;
             while (shapename<things.Count)
             {
+                //selecting one of three properties with the right signature
                 Console.WriteLine("what data number (1-3) to investigate?");
                 dataname = (Console.ReadLine());
                 switch (dataname)
                 {
+                    //use the delegate to activate the string provider accotrding to the property selected
                     case "1":
-                        if (things[shapename].GetType() == typeof(Ball))
-                            UseDelegate(new data2string((things[shapename] as Ball).Color));
-                        else
-                            UseDelegate(new data2string((things[shapename] as Pyramid).Color));
+                        UseDelegate(new data2string((things[shapename]).Color));
                         break;
                     case "2":
-                        if (things[shapename].GetType() == typeof(Ball))
-                            UseDelegate(new data2string((things[shapename] as Ball).Volume));
-                        else
-                            UseDelegate(new data2string((things[shapename] as Pyramid).Volume));
+                        UseDelegate(new data2string((things[shapename]).Volume));
                         break;
                     case "3":
-                        if (things[shapename].GetType() == typeof(Ball))
-                            UseDelegate(new data2string((things[shapename] as Ball).Status));
-                        else
-                            UseDelegate(new data2string((things[shapename] as Pyramid).Status));
+                        UseDelegate(new data2string((things[shapename]).Status));
                         break;
                     default:
                         break;
