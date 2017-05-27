@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DelegateDemo.Objects
 {
-    class Ball
+    class Ball : Shape
     {
         private string color;
         private int diameter;
@@ -24,17 +24,17 @@ namespace DelegateDemo.Objects
             status = !status;
         }
 
-        public string Status()
+        public override string Status()
         {
             return string.Format("The ball is {0} ", (status ? "inflated" : " deflated"));
         }
 
-        public string Color()
+        public override string Color()
         {
             return string.Format("The ball's color is {0} ", color);
         }
 
-        public string Volume()
+        public override string Volume()
         {
             return string.Format("The ball's volume is {0} ", 4 * Math.PI * Math.Pow(diameter / 2.0, 3) / 3);
         }

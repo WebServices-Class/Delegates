@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Objects\Ball.cs" />
     <Compile Include="Objects\Pyramid.cs" />
+    <Compile Include="Objects\Shape.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

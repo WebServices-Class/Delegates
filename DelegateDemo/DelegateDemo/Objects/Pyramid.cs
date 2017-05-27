@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DelegateDemo.Objects
 {
-    class Pyramid
+    class Pyramid:Shape
     {
         private string color;
         private int height,basewidth;
@@ -25,17 +25,17 @@ namespace DelegateDemo.Objects
             status = !status;
         }
 
-        public string Status()
+        public override string Status()
         {
             return string.Format("The Pyramid is {0} ", (status ? "full" : " empty"));
         }
 
-        public string Color()
+        public override string Color()
         {
             return string.Format("The pyramids's color is {0} ", color);
         }
 
-        public string Volume()
+        public override string Volume()
         {
             return string.Format("The pyramids's volume is {0} ", Math.Pow(basewidth, 2) * height / 3);
         }
