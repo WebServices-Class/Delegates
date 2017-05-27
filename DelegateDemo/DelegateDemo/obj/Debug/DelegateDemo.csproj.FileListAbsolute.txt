@@ -1,0 +1,6 @@
+C:\Users\DELL\Documents\GitHub\Delegates\DelegateDemo\DelegateDemo\bin\Debug\DelegateDemo.exe.config
+C:\Users\DELL\Documents\GitHub\Delegates\DelegateDemo\DelegateDemo\bin\Debug\DelegateDemo.exe
+C:\Users\DELL\Documents\GitHub\Delegates\DelegateDemo\DelegateDemo\bin\Debug\DelegateDemo.pdb
+C:\Users\DELL\Documents\GitHub\Delegates\DelegateDemo\DelegateDemo\obj\Debug\DelegateDemo.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Documents\GitHub\Delegates\DelegateDemo\DelegateDemo\obj\Debug\DelegateDemo.exe
+C:\Users\DELL\Documents\GitHub\Delegates\DelegateDemo\DelegateDemo\obj\Debug\DelegateDemo.pdb
